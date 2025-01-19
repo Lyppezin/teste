@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body onload="iniciarJogo()">
+    <div class="container">
+        <h1 class="titulo">Adivinharei sua carta...</h1>
+        <p class="instrucoes">Escolha uma carta qualquer e a memorize</p>
+
+        <div class="grid-container">
+            <div class="coluna" id="coluna-1"></div>
+            <div class="coluna" id="coluna-2"></div>
+            <div class="coluna" id="coluna-3"></div>
+        </div>
+
+        <p class="instrucoess">Selecione a coluna da carta que você escolheu. Quando vc escolher, as cartas vao mudar de posição, aí é só vc escolher a coluna da sua carta mais 2 vezes</p>
+        <div class="buttons">
+            <button onclick="recolherCartas(0)">Escolher Coluna 1</button>
+            <button onclick="recolherCartas(1)">Escolher Coluna 2</button>
+            <button onclick="recolherCartas(2)">Escolher Coluna 3</button>
+        </div>
+
+        <button id="revelar-btn" style="display: none;" onclick="revelarCarta()">Revelar sua carta</button>
+        <button id="reiniciar-btn" class="buttons" style="display: none;" onclick="reloadJogo()">Reiniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
